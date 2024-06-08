@@ -22,7 +22,7 @@ guessed_states = []
 
 while len(guessed_states) < 28:
     answer = screen.textinput(f"{len(guessed_states)}/28 States Correct",
-                              "What's another state name",).title()
+                              "What's another state name").title()
     # print(answer)
 
     if answer == "Exit":
