@@ -9,9 +9,9 @@ screen.setup(600, 715)
 turtle.shape(image)
 
 # For reading the mouse click coordinates
-# def get_mouse_click_coor(x, y):
+# def get_mouse_click_coord(x, y):
 #     print(x, y)
-# turtle.onscreenclick(get_mouse_click_coor)
+# turtle.onscreenclick(get_mouse_click_coord)
 # turtle.mainloop()
 
 
@@ -21,8 +21,8 @@ all_states = data.state.to_list()
 guessed_states = []
 
 while len(guessed_states) < 28:
-    answer = screen.textinput(f"{len(guessed_states)}/28 States Correct",
-                              "What's another state name").title()
+    answer = screen.textinput(title=f"{len(guessed_states)}/28 States Correct",
+                              prompt="State name").title()
     # print(answer)
 
     if answer == "Exit":
@@ -41,4 +41,3 @@ while len(guessed_states) < 28:
         state_data = data[data.state == answer]
         t.goto(int(state_data.x), int(state_data.y))
         t.write(answer)
-
